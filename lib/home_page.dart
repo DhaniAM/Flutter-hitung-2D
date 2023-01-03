@@ -17,14 +17,38 @@ class HomePage extends StatelessWidget {
       body: GridView.count(
         crossAxisCount: 2,
         children: const <GeometryTile>[
-          GeometryTile(geometryName: 'Persegi'),
-          GeometryTile(geometryName: 'Persegi Panjang'),
-          GeometryTile(geometryName: 'Segitiga'),
-          GeometryTile(geometryName: 'Lingkaran'),
-          GeometryTile(geometryName: 'Jajar Genjang'),
-          GeometryTile(geometryName: 'Trapesium'),
-          GeometryTile(geometryName: 'Belah Ketupat'),
-          GeometryTile(geometryName: 'Layang-Layang'),
+          GeometryTile(
+            geometryName: 'Persegi',
+            geometryImg: 'assets/img/persegi.jpg',
+          ),
+          GeometryTile(
+            geometryName: 'Persegi Panjang',
+            geometryImg: 'assets/img/persegi-panjang.jpg',
+          ),
+          GeometryTile(
+            geometryName: 'Segitiga',
+            geometryImg: 'assets/img/segitiga.jpg',
+          ),
+          GeometryTile(
+            geometryName: 'Lingkaran',
+            geometryImg: 'assets/img/lingkaran.jpg',
+          ),
+          GeometryTile(
+            geometryName: 'Jajar Genjang',
+            geometryImg: 'assets/img/jajar-genjang.jpg',
+          ),
+          GeometryTile(
+            geometryName: 'Trapesium',
+            geometryImg: 'assets/img/trapesium.jpg',
+          ),
+          GeometryTile(
+            geometryName: 'Belah Ketupat',
+            geometryImg: 'assets/img/belah-ketupat.jpg',
+          ),
+          GeometryTile(
+            geometryName: 'Layang-Layang',
+            geometryImg: 'assets/img/layang-layang.jpg',
+          ),
         ],
       ),
     );
