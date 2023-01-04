@@ -1,6 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hitung_2d/common/constants.dart';
+import 'package:hitung_2d/page/belah_ketupat_page.dart';
+import 'package:hitung_2d/page/jajar_genjang_page.dart';
+import 'package:hitung_2d/page/layang_layang_page.dart';
+import 'package:hitung_2d/page/lingkaran_page.dart';
 import 'package:hitung_2d/page/persegi_page.dart';
+import 'package:hitung_2d/page/persegi_panjang_page.dart';
+import 'package:hitung_2d/page/segitiga_page.dart';
+import 'package:hitung_2d/page/trapesium_page.dart';
 
 class GeometryTile extends StatelessWidget {
   final String geometryName;
@@ -14,7 +21,37 @@ class GeometryTile extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           CupertinoPageRoute(
-            builder: (context) => PersegiPage(geometryName),
+            builder: (context) {
+              switch (geometryName) {
+                case 'Persegi':
+                  PersegiPage();
+                  break;
+                case 'Persegi Panjang':
+                  PersegiPanjangPage();
+                  break;
+                case 'Segitiga':
+                  SegitigaPage();
+                  break;
+                case 'Lingkaran':
+                  LingkaranPage();
+                  break;
+                case 'Jajar Genjang':
+                  JajarGenjangPage();
+                  break;
+                case 'Trapesium':
+                  TrapesiumPage();
+                  break;
+                case 'Belah Ketupat':
+                  BelahKetupatPage();
+                  break;
+                case 'Layang-Layang':
+                  LayangLayangPage();
+                  break;
+                default:
+                  break;
+              }
+              return PersegiPage();
+            },
           ),
         );
       },
