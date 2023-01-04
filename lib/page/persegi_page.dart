@@ -10,7 +10,7 @@ class PersegiPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           title,
-          style: TextStyle(fontSize: 32),
+          style: const TextStyle(fontSize: 32),
         ),
         toolbarHeight: 60,
         centerTitle: true,

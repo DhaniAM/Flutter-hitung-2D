@@ -9,10 +9,18 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF1FEAC5),
+        toolbarHeight: 60,
         title: const Text(
           'Hitung 2D',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontSize: 36),
         ),
+        actions: <Widget>[
+          Icon(
+            Icons.info_outline,
+            size: 36,
+            color: Colors.white,
+          ),
+        ],
       ),
       body: GridView.count(
         crossAxisCount: 2,
