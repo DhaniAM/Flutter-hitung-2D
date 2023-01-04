@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hitung_2d/common/constants.dart';
 
 class PersegiPage extends StatelessWidget {
   final String title;
@@ -14,8 +15,8 @@ class PersegiPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: const Color(0xFFFF7898),
-        foregroundColor: Colors.white,
+        backgroundColor: myDarkPink,
+        foregroundColor: myWhite,
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hitung_2d/common/constants.dart';
 import 'package:hitung_2d/page/persegi_page.dart';
 
 class GeometryTile extends StatelessWidget {
@@ -20,7 +21,7 @@ class GeometryTile extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(
-            color: const Color.fromRGBO(205, 205, 205, 0.5),
+            color: myGrey,
           ),
         ),
         child: Column(

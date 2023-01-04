@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hitung_2d/common/constants.dart';
 import 'package:hitung_2d/widget/geometry_tile.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,17 +9,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1FEAC5),
+        backgroundColor: myCyan,
         toolbarHeight: 60,
         title: const Text(
           'Hitung 2D',
-          style: TextStyle(color: Colors.white, fontSize: 36),
+          style: TextStyle(color: myWhite, fontSize: 36),
         ),
-        actions: <Widget>[
+        actions: const <Widget>[
           Icon(
             Icons.info_outline,
             size: 36,
-            color: Colors.white,
+            color: myWhite,
           ),
         ],
       ),
