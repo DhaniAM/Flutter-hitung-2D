@@ -12,6 +12,8 @@ class AboutPage extends StatelessWidget {
           'About',
           style: TextStyle(fontSize: 32),
         ),
+        backgroundColor: myDarkBlue2,
+        toolbarHeight: 60,
         centerTitle: true,
         foregroundColor: myWhite,
       ),

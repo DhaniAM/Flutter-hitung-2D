@@ -13,3 +13,4 @@ const Color myLightGreen = Color(0xFFDCFF92);
 const Color myDarkPink = Color(0xFFFF7898);
 const Color myLightPink = Color(0xFFFFB6B6);
 const Color myGrey = Color.fromRGBO(205, 205, 205, 0.5);
+const Color myDarkBlue2 = Color(0xFF7BA0FF);
