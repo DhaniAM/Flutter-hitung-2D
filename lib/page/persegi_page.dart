@@ -8,9 +8,9 @@ class PersegiPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Persegi',
-          style: const TextStyle(fontSize: 32),
+          style: TextStyle(fontSize: 32),
         ),
         toolbarHeight: 60,
         centerTitle: true,

@@ -24,33 +24,25 @@ class GeometryTile extends StatelessWidget {
             builder: (context) {
               switch (geometryName) {
                 case 'Persegi':
-                  PersegiPage();
-                  break;
+                  return const PersegiPage();
                 case 'Persegi Panjang':
-                  PersegiPanjangPage();
-                  break;
+                  return const PersegiPanjangPage();
                 case 'Segitiga':
-                  SegitigaPage();
-                  break;
+                  return const SegitigaPage();
                 case 'Lingkaran':
-                  LingkaranPage();
-                  break;
+                  return const LingkaranPage();
                 case 'Jajar Genjang':
-                  JajarGenjangPage();
-                  break;
+                  return const JajarGenjangPage();
                 case 'Trapesium':
-                  TrapesiumPage();
-                  break;
+                  return const TrapesiumPage();
                 case 'Belah Ketupat':
-                  BelahKetupatPage();
-                  break;
+                  return const BelahKetupatPage();
                 case 'Layang-Layang':
-                  LayangLayangPage();
-                  break;
-                default:
-                  break;
+                  return const LayangLayangPage();
               }
-              return PersegiPage();
+              return const Center(
+                child: Text('Error'),
+              );
             },
           ),
         );
