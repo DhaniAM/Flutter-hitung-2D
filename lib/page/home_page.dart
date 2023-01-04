@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
+import 'package:hitung_2d/page/about_page.dart';
 import 'package:hitung_2d/widget/geometry_tile.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,11 +17,21 @@ class HomePage extends StatelessWidget {
           'Hitung 2D',
           style: TextStyle(color: myWhite, fontSize: 36),
         ),
-        actions: const <Widget>[
-          Icon(
-            Icons.info_outline,
-            size: 36,
-            color: myWhite,
+        actions: <Widget>[
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                CupertinoPageRoute(builder: (context) => const AboutPage()),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(right: 10),
+              child: Icon(
+                Icons.info_outline,
+                size: 36,
+                color: myWhite,
+              ),
+            ),
           ),
         ],
       ),
