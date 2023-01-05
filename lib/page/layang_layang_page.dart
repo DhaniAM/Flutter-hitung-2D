@@ -14,8 +14,8 @@ class LayangLayangPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: myDarkPink,
-        foregroundColor: myWhite,
+        backgroundColor: myLightGreen,
+        foregroundColor: myBlack,
       ),
     );
   }

@@ -14,7 +14,7 @@ class LingkaranPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: myDarkPink,
+        backgroundColor: myDarkBlue,
         foregroundColor: myWhite,
       ),
     );

@@ -14,7 +14,7 @@ class TrapesiumPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: myDarkPink,
+        backgroundColor: myOrange,
         foregroundColor: myWhite,
       ),
     );

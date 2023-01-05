@@ -14,7 +14,7 @@ class JajarGenjangPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: myDarkPink,
+        backgroundColor: myPurple,
         foregroundColor: myWhite,
       ),
     );

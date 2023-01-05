@@ -14,8 +14,8 @@ class PersegiPanjangPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: myDarkPink,
-        foregroundColor: myWhite,
+        backgroundColor: myYellow,
+        foregroundColor: myBlack,
       ),
     );
   }

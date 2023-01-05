@@ -14,7 +14,7 @@ class PersegiPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: myDarkPink,
+        backgroundColor: myRed,
         foregroundColor: myWhite,
       ),
     );

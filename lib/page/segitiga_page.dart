@@ -14,8 +14,8 @@ class SegitigaPage extends StatelessWidget {
         ),
         toolbarHeight: 60,
         centerTitle: true,
-        backgroundColor: myDarkPink,
-        foregroundColor: myWhite,
+        backgroundColor: myDarkGreen,
+        foregroundColor: myBlack,
       ),
     );
   }
