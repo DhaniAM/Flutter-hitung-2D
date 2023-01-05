@@ -52,7 +52,29 @@ class PersegiPage extends StatelessWidget {
                     ],
                   ),
                 ],
-              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all(myWhite),
+                      backgroundColor: MaterialStateProperty.all(myCyan),
+                    ),
+                    onPressed: () {},
+                    child: const Text('Hitung'),
+                  ),
+                  const SizedBox(width: 20),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all(myWhite),
+                      backgroundColor: MaterialStateProperty.all(myDarkPink),
+                    ),
+                    onPressed: () {},
+                    child: const Text('Reset'),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
