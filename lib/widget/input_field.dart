@@ -7,24 +7,22 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(bottom: 20, left: 10),
-      child: Expanded(
-        child: SizedBox(
-          width: 100,
-          height: 50,
-          child: TextField(
-            textAlign: TextAlign.center,
-            textAlignVertical: TextAlignVertical(y: 1),
-            decoration: InputDecoration(
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: myCyan, width: 2),
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: myLightPink, width: 2),
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-              ),
-              hintText: '0',
+      padding: EdgeInsets.only(bottom: 20, left: 0),
+      child: SizedBox(
+        width: 100,
+        height: 50,
+        child: TextField(
+          textAlign: TextAlign.center,
+          textAlignVertical: TextAlignVertical(y: 1),
+          decoration: InputDecoration(
+            hintText: '0',
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: myCyan, width: 2),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: myLightPink, width: 2),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
           ),
         ),

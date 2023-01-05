@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
+import 'package:hitung_2d/widget/geometry_props.dart';
 import 'package:hitung_2d/widget/input_field.dart';
 
 class PersegiPage extends StatelessWidget {
@@ -33,58 +34,22 @@ class PersegiPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: const <Widget>[
-                        SizedBox(
-                          height: 70,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              'Sisi (s):',
-                              style: TextStyle(
-                                fontSize: 24,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 70,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              'Luas (L):',
-                              style: TextStyle(
-                                fontSize: 24,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 70,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              'Keliling (K):',
-                              style: TextStyle(
-                                fontSize: 24,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: const <Widget>[
+                      SizedBox(height: 20),
+                      GeometryProps(props: 'Sisi (s): '),
+                      GeometryProps(props: 'Luas (L): '),
+                      GeometryProps(props: 'Keliling (K): '),
+                    ],
                   ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const <Widget>[
-                        InputField(),
-                        InputField(),
-                        InputField(),
-                      ],
-                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const <Widget>[
+                      InputField(),
+                      InputField(),
+                      InputField(),
+                    ],
                   ),
                 ],
               )
