@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class SegitigaPage extends StatelessWidget {
-  const SegitigaPage({super.key});
+  final String geometryImgDetail;
+  const SegitigaPage({super.key, required this.geometryImgDetail});
 
   @override
   Widget build(BuildContext context) {

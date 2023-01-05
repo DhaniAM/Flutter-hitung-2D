@@ -41,34 +41,42 @@ class HomePage extends StatelessWidget {
           GeometryTile(
             geometryName: 'Persegi',
             geometryImg: 'assets/img/persegi.jpg',
+            geometryImgDetail: 'assets/img/persegi-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Persegi Panjang',
             geometryImg: 'assets/img/persegi-panjang.jpg',
+            geometryImgDetail: 'assets/img/persegi-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Segitiga',
             geometryImg: 'assets/img/segitiga.jpg',
+            geometryImgDetail: 'assets/img/persegi-panjang-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Lingkaran',
             geometryImg: 'assets/img/lingkaran.jpg',
+            geometryImgDetail: 'assets/img/lingkaran-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Jajar Genjang',
             geometryImg: 'assets/img/jajar-genjang.jpg',
+            geometryImgDetail: 'assets/img/jajar-genjang-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Trapesium',
             geometryImg: 'assets/img/trapesium.jpg',
+            geometryImgDetail: 'assets/img/trapesium-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Belah Ketupat',
             geometryImg: 'assets/img/belah-ketupat.jpg',
+            geometryImgDetail: 'assets/img/belah-ketupat-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Layang-Layang',
             geometryImg: 'assets/img/layang-layang.jpg',
+            geometryImgDetail: 'assets/img/layang-layang-detail.jpg',
           ),
         ],
       ),

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class LingkaranPage extends StatelessWidget {
-  const LingkaranPage({super.key});
+  final String geometryImgDetail;
+  const LingkaranPage({super.key, required this.geometryImgDetail});
 
   @override
   Widget build(BuildContext context) {

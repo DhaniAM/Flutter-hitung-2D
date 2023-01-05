@@ -11,9 +11,14 @@ import 'package:hitung_2d/page/trapesium_page.dart';
 
 class GeometryTile extends StatelessWidget {
   final String geometryName;
+  final String geometryImgDetail;
   final String geometryImg;
-  const GeometryTile({Key? key, required this.geometryName, required this.geometryImg})
-      : super(key: key);
+  const GeometryTile({
+    Key? key,
+    required this.geometryName,
+    required this.geometryImg,
+    required this.geometryImgDetail,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,21 +29,21 @@ class GeometryTile extends StatelessWidget {
             builder: (context) {
               switch (geometryName) {
                 case 'Persegi':
-                  return const PersegiPage();
+                  return PersegiPage(geometryImgDetail: geometryImgDetail);
                 case 'Persegi Panjang':
-                  return const PersegiPanjangPage();
+                  return PersegiPanjangPage(geometryImgDetail: geometryImgDetail);
                 case 'Segitiga':
-                  return const SegitigaPage();
+                  return SegitigaPage(geometryImgDetail: geometryImgDetail);
                 case 'Lingkaran':
-                  return const LingkaranPage();
+                  return LingkaranPage(geometryImgDetail: geometryImgDetail);
                 case 'Jajar Genjang':
-                  return const JajarGenjangPage();
+                  return JajarGenjangPage(geometryImgDetail: geometryImgDetail);
                 case 'Trapesium':
-                  return const TrapesiumPage();
+                  return TrapesiumPage(geometryImgDetail: geometryImgDetail);
                 case 'Belah Ketupat':
-                  return const BelahKetupatPage();
+                  return BelahKetupatPage(geometryImgDetail: geometryImgDetail);
                 case 'Layang-Layang':
-                  return const LayangLayangPage();
+                  return LayangLayangPage(geometryImgDetail: geometryImgDetail);
               }
               return const Center(
                 child: Text('Error'),

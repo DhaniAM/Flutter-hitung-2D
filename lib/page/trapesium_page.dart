@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class TrapesiumPage extends StatelessWidget {
-  const TrapesiumPage({super.key});
+  final String geometryImgDetail;
+  const TrapesiumPage({super.key, required this.geometryImgDetail});
 
   @override
   Widget build(BuildContext context) {

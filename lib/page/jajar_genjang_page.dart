@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class JajarGenjangPage extends StatelessWidget {
-  const JajarGenjangPage({super.key});
+  final String geometryImgDetail;
+  const JajarGenjangPage({super.key, required this.geometryImgDetail});
 
   @override
   Widget build(BuildContext context) {

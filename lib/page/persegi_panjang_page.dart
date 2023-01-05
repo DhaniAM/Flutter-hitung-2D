@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class PersegiPanjangPage extends StatelessWidget {
-  const PersegiPanjangPage({super.key});
+  final String geometryImgDetail;
+  const PersegiPanjangPage({super.key, required this.geometryImgDetail});
 
   @override
   Widget build(BuildContext context) {
