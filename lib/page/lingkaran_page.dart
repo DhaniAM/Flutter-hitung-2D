@@ -33,6 +33,15 @@ class _LingkaranPageState extends State<LingkaranPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    rController.dispose();
+    dController.dispose();
+    luasController.dispose();
+    kelilingController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

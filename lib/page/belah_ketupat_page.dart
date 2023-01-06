@@ -35,6 +35,16 @@ class _BelahKetupatPageState extends State<BelahKetupatPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    d1Controller.dispose();
+    d2Controller.dispose();
+    sisiController.dispose();
+    luasController.dispose();
+    kelilingController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

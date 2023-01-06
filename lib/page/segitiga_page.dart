@@ -34,6 +34,15 @@ class _SegitigaPageState extends State<SegitigaPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    sController.dispose();
+    tinggiController.dispose();
+    luasController.dispose();
+    kelilingController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

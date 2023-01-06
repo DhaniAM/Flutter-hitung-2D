@@ -33,6 +33,15 @@ class _PersegiPanjangPageState extends State<PersegiPanjangPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    panjangController.dispose();
+    lebarController.dispose();
+    luasController.dispose();
+    kelilingController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

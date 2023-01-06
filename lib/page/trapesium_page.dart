@@ -37,6 +37,17 @@ class _TrapesiumPageState extends State<TrapesiumPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    aController.dispose();
+    bController.dispose();
+    tinggiController.dispose();
+    sController.dispose();
+    luasController.dispose();
+    kelilingController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

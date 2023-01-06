@@ -35,6 +35,16 @@ class _JajarGenjangPageState extends State<JajarGenjangPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    s1Controller.dispose();
+    s2Controller.dispose();
+    tinggiController.dispose();
+    luasController.dispose();
+    kelilingController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

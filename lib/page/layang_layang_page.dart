@@ -37,6 +37,17 @@ class _LayangLayangPageState extends State<LayangLayangPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    d1Controller.dispose();
+    d2Controller.dispose();
+    s1Controller.dispose();
+    s2Controller.dispose();
+    luasController.dispose();
+    kelilingController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
