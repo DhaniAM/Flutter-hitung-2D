@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 import 'package:hitung_2d/widget/geometry_props.dart';
+import 'package:hitung_2d/widget/hitung_button.dart';
 import 'package:hitung_2d/widget/input_field.dart';
+import 'package:hitung_2d/widget/reset_button.dart';
 
 class PersegiPage extends StatelessWidget {
   final String geometryImgDetail;
-  const PersegiPage({Key? key, required this.geometryImgDetail}) : super(key: key);
+  const PersegiPage({Key? key, required this.geometryImgDetail})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,24 +58,10 @@ class PersegiPage extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all(myWhite),
-                      backgroundColor: MaterialStateProperty.all(myCyan),
-                    ),
-                    onPressed: () {},
-                    child: const Text('Hitung'),
-                  ),
-                  const SizedBox(width: 20),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all(myWhite),
-                      backgroundColor: MaterialStateProperty.all(myDarkPink),
-                    ),
-                    onPressed: () {},
-                    child: const Text('Reset'),
-                  ),
+                children: const [
+                  HitungButton(),
+                  SizedBox(width: 30),
+                  ResetButton(),
                 ],
               ),
             ],
