@@ -41,7 +41,10 @@ class TrapesiumPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: const <Widget>[
                       SizedBox(height: 20),
-                      GeometryProps(props: 'Sisi (s): '),
+                      GeometryProps(props: 'Sisi bawah (a): '),
+                      GeometryProps(props: 'Sisi atas (b): '),
+                      GeometryProps(props: 'Tinggi (t): '),
+                      GeometryProps(props: 'Sisi (c, d): '),
                       GeometryProps(props: 'Luas (L): '),
                       GeometryProps(props: 'Keliling (K): '),
                     ],
@@ -49,6 +52,9 @@ class TrapesiumPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const <Widget>[
+                      InputField(),
+                      InputField(),
+                      InputField(),
                       InputField(),
                       InputField(),
                       InputField(),

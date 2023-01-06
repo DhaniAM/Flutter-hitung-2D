@@ -9,7 +9,7 @@ class GeometryProps extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: SizedBox(
-        height: 50,
+        height: 55,
         child: Text(
           props,
           style: const TextStyle(

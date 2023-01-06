@@ -41,6 +41,8 @@ class BelahKetupatPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: const <Widget>[
                       SizedBox(height: 20),
+                      GeometryProps(props: 'Diagonal 1 (d1): '),
+                      GeometryProps(props: 'Diagonal 2 (d2): '),
                       GeometryProps(props: 'Sisi (s): '),
                       GeometryProps(props: 'Luas (L): '),
                       GeometryProps(props: 'Keliling (K): '),
@@ -49,6 +51,8 @@ class BelahKetupatPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const <Widget>[
+                      InputField(),
+                      InputField(),
                       InputField(),
                       InputField(),
                       InputField(),
