@@ -41,7 +41,10 @@ class SegitigaPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: const <Widget>[
                       SizedBox(height: 20),
-                      GeometryProps(props: 'Sisi (s): '),
+                      GeometryProps(props: 'Alas / Sisi 1 (a): '),
+                      GeometryProps(props: 'Tinggi (t): '),
+                      GeometryProps(props: 'Sisi 2 (b): '),
+                      GeometryProps(props: 'Sisi 3 (c): '),
                       GeometryProps(props: 'Luas (L): '),
                       GeometryProps(props: 'Keliling (K): '),
                     ],
@@ -49,6 +52,9 @@ class SegitigaPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const <Widget>[
+                      InputField(),
+                      InputField(),
+                      InputField(),
                       InputField(),
                       InputField(),
                       InputField(),
@@ -64,6 +70,7 @@ class SegitigaPage extends StatelessWidget {
                   ResetButton(),
                 ],
               ),
+              const SizedBox(height: 50),
             ],
           ),
         ),

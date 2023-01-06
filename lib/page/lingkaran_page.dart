@@ -41,7 +41,8 @@ class LingkaranPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: const <Widget>[
                       SizedBox(height: 20),
-                      GeometryProps(props: 'Sisi (s): '),
+                      GeometryProps(props: 'Jari-jari (r): '),
+                      GeometryProps(props: 'Diameter (d): '),
                       GeometryProps(props: 'Luas (L): '),
                       GeometryProps(props: 'Keliling (K): '),
                     ],
@@ -49,6 +50,7 @@ class LingkaranPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const <Widget>[
+                      InputField(),
                       InputField(),
                       InputField(),
                       InputField(),
@@ -64,6 +66,7 @@ class LingkaranPage extends StatelessWidget {
                   ResetButton(),
                 ],
               ),
+              const SizedBox(height: 50),
             ],
           ),
         ),

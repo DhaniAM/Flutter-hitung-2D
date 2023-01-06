@@ -64,6 +64,7 @@ class TrapesiumPage extends StatelessWidget {
                   ResetButton(),
                 ],
               ),
+              const SizedBox(height: 50),
             ],
           ),
         ),

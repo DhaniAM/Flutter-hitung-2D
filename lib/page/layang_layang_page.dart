@@ -64,6 +64,7 @@ class LayangLayangPage extends StatelessWidget {
                   ResetButton(),
                 ],
               ),
+              const SizedBox(height: 50),
             ],
           ),
         ),

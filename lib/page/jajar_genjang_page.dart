@@ -41,7 +41,9 @@ class JajarGenjangPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: const <Widget>[
                       SizedBox(height: 20),
-                      GeometryProps(props: 'Sisi (s): '),
+                      GeometryProps(props: 'Alas / Sisi 1 (a, b): '),
+                      GeometryProps(props: 'Tinggi (t): '),
+                      GeometryProps(props: 'Sisi 2 (c, d): '),
                       GeometryProps(props: 'Luas (L): '),
                       GeometryProps(props: 'Keliling (K): '),
                     ],
@@ -49,6 +51,8 @@ class JajarGenjangPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const <Widget>[
+                      InputField(),
+                      InputField(),
                       InputField(),
                       InputField(),
                       InputField(),
@@ -64,6 +68,7 @@ class JajarGenjangPage extends StatelessWidget {
                   ResetButton(),
                 ],
               ),
+              const SizedBox(height: 50),
             ],
           ),
         ),

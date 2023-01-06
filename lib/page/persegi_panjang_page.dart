@@ -41,7 +41,8 @@ class PersegiPanjangPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: const <Widget>[
                       SizedBox(height: 20),
-                      GeometryProps(props: 'Sisi (s): '),
+                      GeometryProps(props: 'Panjang (p): '),
+                      GeometryProps(props: 'Lebar (l): '),
                       GeometryProps(props: 'Luas (L): '),
                       GeometryProps(props: 'Keliling (K): '),
                     ],
@@ -49,6 +50,7 @@ class PersegiPanjangPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const <Widget>[
+                      InputField(),
                       InputField(),
                       InputField(),
                       InputField(),
@@ -64,6 +66,7 @@ class PersegiPanjangPage extends StatelessWidget {
                   ResetButton(),
                 ],
               ),
+              const SizedBox(height: 50),
             ],
           ),
         ),
