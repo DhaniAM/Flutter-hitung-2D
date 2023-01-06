@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class InputField extends StatelessWidget {
-  const InputField({super.key});
+  final TextEditingController controller;
+  const InputField({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class InputField extends StatelessWidget {
         width: 100,
         height: 55,
         child: TextField(
+          controller: controller,
           keyboardType: TextInputType.number,
           inputFormatters: [FilteringTextInputFormatter.digitsOnly],
           textAlign: TextAlign.center,

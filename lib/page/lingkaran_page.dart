@@ -5,9 +5,32 @@ import 'package:hitung_2d/widget/hitung_button.dart';
 import 'package:hitung_2d/widget/input_field.dart';
 import 'package:hitung_2d/widget/reset_button.dart';
 
-class LingkaranPage extends StatelessWidget {
+class LingkaranPage extends StatefulWidget {
   final String geometryImgDetail;
   const LingkaranPage({super.key, required this.geometryImgDetail});
+
+  @override
+  State<LingkaranPage> createState() => _LingkaranPageState();
+}
+
+class _LingkaranPageState extends State<LingkaranPage> {
+  final TextEditingController rController = TextEditingController();
+  final TextEditingController dController = TextEditingController();
+  final TextEditingController luasController = TextEditingController();
+  final TextEditingController kelilingController = TextEditingController();
+
+  void hitung() {
+    setState(() {});
+  }
+
+  void reset() {
+    setState(() {
+      rController.text = '';
+      dController.text = '';
+      luasController.text = '';
+      kelilingController.text = '';
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +52,7 @@ class LingkaranPage extends StatelessWidget {
             children: <Widget>[
               const SizedBox(height: 20),
               Image(
-                image: AssetImage(geometryImgDetail),
+                image: AssetImage(widget.geometryImgDetail),
               ),
               const SizedBox(
                 height: 30,
@@ -49,21 +72,21 @@ class LingkaranPage extends StatelessWidget {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const <Widget>[
-                      InputField(),
-                      InputField(),
-                      InputField(),
-                      InputField(),
+                    children: <Widget>[
+                      InputField(controller: rController),
+                      InputField(controller: dController),
+                      InputField(controller: luasController),
+                      InputField(controller: kelilingController),
                     ],
                   ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  HitungButton(),
-                  SizedBox(width: 30),
-                  ResetButton(),
+                children: <Widget>[
+                  HitungButton(hitung: hitung),
+                  const SizedBox(width: 30),
+                  ResetButton(reset: reset),
                 ],
               ),
               const SizedBox(height: 50),

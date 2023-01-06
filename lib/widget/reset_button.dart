@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class ResetButton extends StatelessWidget {
-  const ResetButton({Key? key}) : super(key: key);
+  final Function reset;
+  const ResetButton({Key? key, required this.reset}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,9 @@ class ResetButton extends StatelessWidget {
         backgroundColor: myDarkPink,
         minimumSize: const Size(100, 50),
       ),
-      onPressed: () {},
+      onPressed: () {
+        reset();
+      },
       child: const Text(
         'Reset',
         style: TextStyle(fontSize: 20),

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 
 class HitungButton extends StatelessWidget {
-  const HitungButton({Key? key}) : super(key: key);
+  final Function hitung;
+  const HitungButton({Key? key, required this.hitung}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,9 @@ class HitungButton extends StatelessWidget {
         backgroundColor: myCyan,
         minimumSize: const Size(100, 50),
       ),
-      onPressed: () {},
+      onPressed: () {
+        hitung();
+      },
       child: const Text(
         'Hitung',
         style: TextStyle(fontSize: 20),
