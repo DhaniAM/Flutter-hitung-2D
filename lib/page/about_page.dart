@@ -36,7 +36,7 @@ class AboutPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               const Text(
-                'Dibuat dengan menggunakan Flutter \n 2022 \u00a9 Ramadhani Adjar Mustaqim',
+                'Dibuat dengan menggunakan Flutter \n 2023 \u00a9 Ramadhani Adjar Mustaqim',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, height: 1.8),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'page/home_page.dart';
 
 void main() {
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Hitung 2D',
-      theme: ThemeData(primarySwatch: Colors.cyan, fontFamily: 'Itim'),
+      theme: ThemeData(
+          primarySwatch: Colors.cyan,
+          scaffoldBackgroundColor: Colors.white,
+          fontFamily: 'Itim'),
       home: const HomePage(),
     );
   }

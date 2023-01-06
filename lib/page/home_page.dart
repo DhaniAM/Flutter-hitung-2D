@@ -46,12 +46,12 @@ class HomePage extends StatelessWidget {
           GeometryTile(
             geometryName: 'Persegi Panjang',
             geometryImg: 'assets/img/persegi-panjang.jpg',
-            geometryImgDetail: 'assets/img/persegi-detail.jpg',
+            geometryImgDetail: 'assets/img/persegi-panjang-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Segitiga',
             geometryImg: 'assets/img/segitiga.jpg',
-            geometryImgDetail: 'assets/img/persegi-panjang-detail.jpg',
+            geometryImgDetail: 'assets/img/segitiga-detail.jpg',
           ),
           GeometryTile(
             geometryName: 'Lingkaran',

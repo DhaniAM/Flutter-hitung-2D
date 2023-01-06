@@ -16,7 +16,7 @@ class PersegiPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Persegi',
-          style: TextStyle(fontSize: 32),
+          style: TextStyle(fontSize: 24),
         ),
         toolbarHeight: 60,
         centerTitle: true,
@@ -28,6 +28,7 @@ class PersegiPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              const SizedBox(height: 20),
               Image(
                 image: AssetImage(geometryImgDetail),
               ),
@@ -58,7 +59,7 @@ class PersegiPage extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: const <Widget>[
                   HitungButton(),
                   SizedBox(width: 30),
                   ResetButton(),
