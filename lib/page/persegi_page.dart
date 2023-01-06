@@ -49,6 +49,8 @@ class _PersegiPageState extends State<PersegiPage> {
         sisiController.text = (keliling / 4).toString();
         luasController.text = pow((keliling / 4), 2).toString();
         counted = true;
+
+        // if none of the above
       } else if (counted == false) {
         showDialog(
           context: context,

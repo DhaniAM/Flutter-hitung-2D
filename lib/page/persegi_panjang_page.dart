@@ -80,7 +80,9 @@ class _PersegiPanjangPageState extends State<PersegiPanjangPage> {
         lebarController.text = lebar.toString();
         luasController.text = (lebar * panjang).toString();
         counted = true;
-      } else {
+
+        // if none of the above
+      } else if (counted == false) {
         showDialog(
           context: context,
           builder: (context) {

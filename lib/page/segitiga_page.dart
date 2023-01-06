@@ -95,6 +95,7 @@ class _SegitigaPageState extends State<SegitigaPage> {
         sisiController.text = sisi.toString();
         kelilingController.text = (alas + sisi + sisi).toString();
         counted = true;
+
         // hitung sisi, luas, tinggi if keliling, alas available
       } else if (kelilingController.text != '' &&
           alasController.text != '' &&
@@ -109,6 +110,7 @@ class _SegitigaPageState extends State<SegitigaPage> {
         tinggiController.text = tinggi.toString();
         luasController.text = ((alas * tinggi) / 2).toString();
         counted = true;
+
         // hitung alas, luas, tinggi if keliling, sisi available
       } else if (kelilingController.text != '' &&
           sisiController.text != '' &&
@@ -123,6 +125,8 @@ class _SegitigaPageState extends State<SegitigaPage> {
         tinggiController.text = tinggi.toString();
         luasController.text = ((alas * tinggi) / 2).toString();
         counted = true;
+
+        // if none of the above
       } else if (counted == false) {
         showDialog(
           context: context,
