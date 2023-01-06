@@ -25,46 +25,48 @@ class _PersegiPageState extends State<PersegiPage> {
   void hitung() {
     setState(() {
       // hitung luas & keliling if Sisi available
-      if (sisiController.text != '') {
-        if ((luasController.text != '' || kelilingController.text != '') &&
-            counted == false) {
-          showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                title: const Text('Error'),
-                content: const Text('Invalid input'),
-                actions: <Widget>[
-                  TextButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    child: const Text('Ok'),
-                  )
-                ],
-              );
-            },
-          );
-        } else {
-          int sisi = int.parse(sisiController.text);
-          luasController.text = (sisi * sisi).toString();
-          kelilingController.text = (sisi * 4).toString();
-          counted = true;
-        }
+      if (sisiController.text != '' &&
+          luasController.text == '' &&
+          kelilingController.text == '') {
+        int sisi = int.parse(sisiController.text);
+        luasController.text = (sisi * sisi).toString();
+        kelilingController.text = (sisi * 4).toString();
+        counted = true;
         // hitung sisi & keliling if Luas available
-      } else if (luasController.text != '') {
+      } else if (luasController.text != '' &&
+          sisiController.text == '' &&
+          kelilingController.text == '') {
         int luas = int.parse(luasController.text);
         sisiController.text = sqrt(luas).toString();
         kelilingController.text = (sqrt(luas) * 4).toString();
         counted = true;
+
         // hitung sisi & keliling if Luas available
-      } else if (kelilingController.text != '') {
+      } else if (kelilingController.text != '' &&
+          sisiController.text == '' &&
+          luasController.text == '') {
         int keliling = int.parse(kelilingController.text);
         sisiController.text = (keliling / 4).toString();
         luasController.text = pow((keliling / 4), 2).toString();
         counted = true;
-      } else {
-        luasController.text = '';
+      } else if (counted == false) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: const Text('Salah input'),
+              content: const Text('Tidak bisa menghitung :('),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Ok'),
+                )
+              ],
+            );
+          },
+        );
       }
     });
   }
