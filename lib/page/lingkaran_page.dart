@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:hitung_2d/common/constants.dart';
 import 'package:hitung_2d/widget/geometry_props.dart';
@@ -18,13 +20,67 @@ class _LingkaranPageState extends State<LingkaranPage> {
   final TextEditingController dController = TextEditingController();
   final TextEditingController luasController = TextEditingController();
   final TextEditingController kelilingController = TextEditingController();
+  bool counted = false;
 
   void hitung() {
     setState(() {
+      String r = rController.text;
+      String d = dController.text;
+      String l = luasController.text;
+      String k = kelilingController.text;
+
       /// if r exist, count d, L, K
-      /// if d exist, count r, L, K
-      /// if L exist, count r, d, K
-      /// if K exist, count r, d, L
+      if (r != '' && d == '' && k == '' && l == '') {
+        int jariJari = int.parse(r);
+        dController.text = (jariJari * 2).toString();
+        luasController.text = (22 * jariJari * jariJari / 7).toString();
+        kelilingController.text = (2 * 22 * jariJari / 7).toString();
+        counted = true;
+
+        /// if d exist, count r, L, K
+      } else if (d != '' && r == '' && l == '' && k == '') {
+        int diameter = int.parse(d);
+        rController.text = (diameter / 2).toString();
+        luasController.text = (1 / 4 * 22 * diameter * diameter / 7).toString();
+        kelilingController.text = (22 * diameter / 7).toString();
+        counted = true;
+
+        /// if L exist, count r, d, K
+      } else if (l != '' && r == '' && d == '' && k == '') {
+        int luas = int.parse(l);
+        num jariJari = sqrt(luas * 7 / 22);
+        rController.text = jariJari.toString();
+        dController.text = (jariJari * 2).toString();
+        kelilingController.text = (2 * 22 * jariJari / 7).toString();
+        counted = true;
+
+        /// if K exist, count r, d, L
+      } else if (k != '' && r == '' && d == '' && l == '') {
+        int keliling = int.parse(k);
+        num jariJari = (keliling / (2 * 22 / 7));
+        rController.text = jariJari.toString();
+        dController.text = (jariJari * 2).toString();
+        luasController.text = (22 * jariJari * jariJari / 7).toString();
+        counted = true;
+      } else if (counted == false) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: const Text('Salah input'),
+              content: const Text('Tidak bisa menghitung :('),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Ok'),
+                )
+              ],
+            );
+          },
+        );
+      }
     });
   }
 
@@ -34,6 +90,7 @@ class _LingkaranPageState extends State<LingkaranPage> {
       dController.text = '';
       luasController.text = '';
       kelilingController.text = '';
+      counted = false;
     });
   }
 
