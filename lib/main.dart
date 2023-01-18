@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hitung 2D',
       theme: ThemeData(
-          primarySwatch: Colors.cyan,
-          scaffoldBackgroundColor: Colors.white,
-          fontFamily: 'Itim'),
+        primarySwatch: Colors.cyan,
+        scaffoldBackgroundColor: Colors.white,
+        fontFamily: 'Itim',
+      ),
       home: const HomePage(),
     );
   }

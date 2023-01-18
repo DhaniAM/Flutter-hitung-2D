@@ -20,7 +20,12 @@ class _LingkaranPageState extends State<LingkaranPage> {
   final TextEditingController kelilingController = TextEditingController();
 
   void hitung() {
-    setState(() {});
+    setState(() {
+      /// if r exist, count d, L, K
+      /// if d exist, count r, L, K
+      /// if L exist, count r, d, K
+      /// if K exist, count r, d, L
+    });
   }
 
   void reset() {
