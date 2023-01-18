@@ -19,9 +19,100 @@ class _JajarGenjangPageState extends State<JajarGenjangPage> {
   final TextEditingController s2Controller = TextEditingController();
   final TextEditingController luasController = TextEditingController();
   final TextEditingController kelilingController = TextEditingController();
+  bool counted = false;
 
   void hitung() {
-    setState(() {});
+    setState(() {
+      String a = s1Controller.text;
+      String t = tinggiController.text;
+      String s = s2Controller.text;
+      String l = luasController.text;
+      String k = kelilingController.text;
+
+      /// if Alas & Tinggi known, count Luas
+      if (a != '' && t != '' && l == '' && k == '' && s == '') {
+        int alas = int.parse(a);
+        int tinggi = int.parse(t);
+        luasController.text = (alas * tinggi).toString();
+        counted = true;
+
+        /// if Alas, Tinggi, Sisi known, count L & K
+      } else if (a != '' && t != '' && l == '' && k == '' && s != '') {
+        int alas = int.parse(a);
+        int tinggi = int.parse(t);
+        int sisi = int.parse(s);
+        luasController.text = (alas * tinggi).toString();
+        kelilingController.text = (2 * (alas + tinggi)).toString();
+        counted = true;
+
+        /// if Luas & Alas known, count Tinggi
+      } else if (a != '' && t == '' && l != '' && k == '' && s == '') {
+        int alas = int.parse(a);
+        int luas = int.parse(l);
+        tinggiController.text = (luas / alas).toString();
+        counted = true;
+
+        /// if Luas, Sisi, Alas known, count Tinggi, keliling
+      } else if (a != '' && t == '' && l != '' && k == '' && s != '') {
+        int alas = int.parse(a);
+        int luas = int.parse(l);
+        int sisi = int.parse(s);
+        tinggiController.text = (luas / alas).toString();
+        kelilingController.text = (2 * (alas + sisi)).toString();
+        counted = true;
+
+        /// if Luas & Tinggi known, count Alas
+      } else if (a == '' && t != '' && l != '' && k == '' && s == '') {
+        s1Controller.text = (int.parse(l) / int.parse(t)).toString();
+        counted = true;
+
+        /// if Luas, Sisi, Tinggi known, count Alas, Keliling
+      } else if (a == '' && t != '' && l != '' && k == '' && s != '') {
+        num alas = (int.parse(l) / int.parse(t));
+        s1Controller.text = alas.toString();
+        kelilingController.text = (2 * (alas + num.parse(s))).toString();
+        counted = true;
+
+        /// if Alas & Sisi known, count K
+      } else if (a != '' && t == '' && l == '' && k == '' && s != '') {
+        kelilingController.text = (2 * (int.parse(a) + int.parse(s))).toString();
+        counted = true;
+
+        /// if Alas, Sisi, Tinggi known, count K, L
+      } else if (a != '' && t != '' && l == '' && k == '' && s != '') {
+        kelilingController.text = (2 * (int.parse(a) + int.parse(s))).toString();
+        luasController.text = (int.parse(a) * int.parse(t)).toString();
+        counted = true;
+
+        /// if K & Alas known, count Sisi
+      } else if (a != '' && t == '' && l == '' && k != '' && s == '') {
+        s2Controller.text = ((int.parse(k) - (2 * int.parse(a))) / 2).toString();
+        counted = true;
+
+        /// if K & Sisi known, count Alas
+      } else if (a == '' && t == '' && l == '' && k != '' && s != '') {
+        s1Controller.text = ((int.parse(k) - (2 * int.parse(s))) / 2).toString();
+        counted = true;
+      } else if (counted == false) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: const Text('Salah input'),
+              content: const Text('Tidak bisa menghitung :('),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Ok'),
+                )
+              ],
+            );
+          },
+        );
+      }
+    });
   }
 
   void reset() {
@@ -31,6 +122,7 @@ class _JajarGenjangPageState extends State<JajarGenjangPage> {
       tinggiController.text = '';
       luasController.text = '';
       kelilingController.text = '';
+      counted = false;
     });
   }
 
