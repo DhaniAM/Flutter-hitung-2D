@@ -20,9 +20,17 @@ class _LayangLayangPageState extends State<LayangLayangPage> {
   final TextEditingController s2Controller = TextEditingController();
   final TextEditingController luasController = TextEditingController();
   final TextEditingController kelilingController = TextEditingController();
+  bool counted = false;
 
   void hitung() {
-    setState(() {});
+    setState(() {
+      /// if d1, d2 known, count L
+      /// if s1, s2 known, count K
+      /// if L, d1 known, count d2
+      /// if L, d2 known, count d1
+      /// if K, s1 known, count s2
+      /// if K, s2 known, count s1
+    });
   }
 
   void reset() {
