@@ -19,9 +19,67 @@ class _BelahKetupatPageState extends State<BelahKetupatPage> {
   final TextEditingController sisiController = TextEditingController();
   final TextEditingController luasController = TextEditingController();
   final TextEditingController kelilingController = TextEditingController();
+  bool counted = false;
 
   void hitung() {
-    setState(() {});
+    setState(() {
+      String d1 = d1Controller.text;
+      String d2 = d2Controller.text;
+      String s = sisiController.text;
+      String l = luasController.text;
+      String k = kelilingController.text;
+
+      /// if d1, d2 known, count L
+      if (d1 != '' && d2 != '' && l == '') {
+        int diag1 = int.parse(d1);
+        int diag2 = int.parse(d2);
+        luasController.text = (diag1 * diag2 / 2).toString();
+        counted = true;
+      }
+
+      /// if s known, count K
+      if (s != '' && k == '') {
+        int sisi = int.parse(s);
+        kelilingController.text = (4 * sisi).toString();
+        counted = true;
+      }
+
+      /// if K known, count s
+      if (k != '' && s == '') {
+        int keliling = int.parse(k);
+        sisiController.text = (keliling / 4).toString();
+        counted = true;
+      }
+
+      /// if L, d1 known, count d2
+      if (l != '' && d1 != '' && d2 == '') {
+        int luas = int.parse(l);
+        int diag1 = int.parse(d1);
+        d2Controller.text = ((luas * 2) / diag1).toString();
+        counted = true;
+      }
+
+      /// if L, d2 known, count d1
+      if (counted == false) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: const Text('Salah input'),
+              content: const Text('Tidak bisa menghitung :('),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Ok'),
+                )
+              ],
+            );
+          },
+        );
+      }
+    });
   }
 
   void reset() {
@@ -31,6 +89,7 @@ class _BelahKetupatPageState extends State<BelahKetupatPage> {
       sisiController.text = '';
       luasController.text = '';
       kelilingController.text = '';
+      counted = false;
     });
   }
 
