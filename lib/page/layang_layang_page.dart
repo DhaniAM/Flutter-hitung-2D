@@ -24,12 +24,80 @@ class _LayangLayangPageState extends State<LayangLayangPage> {
 
   void hitung() {
     setState(() {
+      String d1 = d1Controller.text;
+      String d2 = d2Controller.text;
+      String s1 = s1Controller.text;
+      String s2 = s2Controller.text;
+      String l = luasController.text;
+      String k = kelilingController.text;
+
       /// if d1, d2 known, count L
+      if (d1 != '' && d2 != '' && l == '') {
+        int diag1 = int.parse(d1);
+        int diag2 = int.parse(d2);
+        luasController.text = (diag1 * diag2 / 2).toString();
+        counted = true;
+      }
+
       /// if s1, s2 known, count K
+      if (s1 != '' && s2 != '' && k == '') {
+        int sisi1 = int.parse(s1);
+        int sisi2 = int.parse(s2);
+        kelilingController.text = ((2 * sisi1) + (2 * sisi2)).toString();
+        counted = true;
+      }
+
       /// if L, d1 known, count d2
+      if (l != '' && d1 != '' && d2 == '') {
+        int luas = int.parse(l);
+        int diag1 = int.parse(d1);
+        d2Controller.text = ((luas * 2) / diag1).toString();
+        counted = true;
+      }
+
       /// if L, d2 known, count d1
+      if (l != '' && d2 != '' && d1 == '') {
+        int luas = int.parse(l);
+        int diag2 = int.parse(d2);
+        d1Controller.text = ((luas * 2) / diag2).toString();
+        counted = true;
+      }
+
       /// if K, s1 known, count s2
+      if (k != '' && s1 != '' && s2 == '') {
+        int keliling = int.parse(k);
+        int sisi1 = int.parse(s1);
+        s2Controller.text = ((keliling - (2 * sisi1)) / 2).toString();
+        counted = true;
+      }
+
       /// if K, s2 known, count s1
+      if (k != '' && s2 != '' && s1 == '') {
+        int keliling = int.parse(k);
+        int sisi2 = int.parse(s2);
+        s1Controller.text = ((keliling - (2 * sisi2)) / 2).toString();
+        counted = true;
+      }
+
+      if (counted == false) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: const Text('Salah input'),
+              content: const Text('Tidak bisa menghitung :('),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Ok'),
+                )
+              ],
+            );
+          },
+        );
+      }
     });
   }
 
@@ -41,6 +109,7 @@ class _LayangLayangPageState extends State<LayangLayangPage> {
       s2Controller.text = '';
       luasController.text = '';
       kelilingController.text = '';
+      counted = false;
     });
   }
 

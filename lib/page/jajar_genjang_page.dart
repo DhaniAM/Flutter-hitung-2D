@@ -42,7 +42,7 @@ class _JajarGenjangPageState extends State<JajarGenjangPage> {
         int tinggi = int.parse(t);
         int sisi = int.parse(s);
         luasController.text = (alas * tinggi).toString();
-        kelilingController.text = (2 * (alas + tinggi)).toString();
+        kelilingController.text = (2 * (alas + sisi)).toString();
         counted = true;
 
         /// if Luas & Alas known, count Tinggi
