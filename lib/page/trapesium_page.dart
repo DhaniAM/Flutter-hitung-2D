@@ -45,7 +45,7 @@ class _TrapesiumPageState extends State<TrapesiumPage> {
         int alas = int.parse(a);
         int atap = int.parse(b);
         int sisiCD = int.parse(cd);
-        kelilingController.text = (alas + atap + sisiCD).toString();
+        kelilingController.text = (alas + atap + sisiCD + sisiCD).toString();
         counted = true;
       }
 
