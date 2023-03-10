@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'page/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Hitung2d());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Hitung2d extends StatelessWidget {
+  const Hitung2d({super.key});
 
   @override
   Widget build(BuildContext context) {
